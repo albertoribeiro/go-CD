@@ -15,7 +15,7 @@ func main() {
 func index(w http.ResponseWriter, r *http.Request) {
 	loopSqrt()
 	tpl, _ := template.ParseFiles("index.html")
-	message := greeting("Code.education Rocks !!! + square loop")
+	message := greeting("Code.education Rocks !!! + square loop + CI/CD")
 	data := map[string]string{
 		"Message": message,
 	}

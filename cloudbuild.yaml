@@ -1,4 +1,4 @@
 steps:
     - id: "Rodando docker build"
       name: 'gcr.io/cloud-builders/docker'
-      args: ['build','-t','app-go-square-hpa','.']
+      args: ['build','-t','app-go-web','.']

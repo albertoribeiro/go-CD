@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: goweb-square-hpa
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            app: goweb-square-hpa
+    template: 
+        metadata:
+            labels:
+                app: goweb-square-hpa 
+        spec: 
+            containers:
+            - name: goweb-square
+              image: img-app-deployment
+              ports:
+              - containerPort: 8000
+              resources: 
+                requests:
+                  cpu: "50m"
+                limits:
+                  cpu: "100m"

@@ -9,4 +9,3 @@ RUN go install ./...
 RUN go test .
 
 CMD ["app"] 
-

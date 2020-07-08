@@ -13,7 +13,7 @@ steps:
       args:
         - '-c'
         - |
-          sed 's#img-app-deployment#gcr.io/$PROJECT_ID/app-laravel:$SHORT_SHA#g' k8s/deployment.yaml > k8s/deployment-new.yaml;
+          sed 's#img-app-deployment#gcr.io/$PROJECT_ID/app-go-web:$SHORT_SHA#g' k8s/deployment.yaml > k8s/deployment-new.yaml;
           cat k8s/deployment-new.yaml;
 
     - id: "Deployng k8s"
